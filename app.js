@@ -22,3 +22,16 @@ function atualizarListaDeAmigos(){
         lista.appendChild(li);
     }
 }
+
+function sortearAmigo(){
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = '';
+
+    if(ListaDeAmigos.length < 1){
+        alert('Adicione nomes na lista para realizar o sorteio!');
+    }else{
+        let posicaoLista = Math.floor(Math.random() * ListaDeAmigos.length);
+        let nomeSorteado = ListaDeAmigos[posicaoLista];
+        resultado.innerHTML = nomeSorteado;
+    }
+}
